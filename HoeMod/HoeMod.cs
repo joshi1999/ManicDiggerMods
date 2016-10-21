@@ -1,5 +1,9 @@
 ﻿/* Hello,
- * its my first mod i upload i hope you like it:)*/
+ * its my first mod i upload i hope you like it:) 
+ */
+/**
+ * Author: Dominik John(joshi1999)
+ */
 
 //V.1.0
 
