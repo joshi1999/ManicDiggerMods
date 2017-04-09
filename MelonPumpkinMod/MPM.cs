@@ -1,13 +1,9 @@
 ﻿/*
- * Author: Dominik John(joshi1999)
- * 
- * Hello,
- * 
- * thats the MelonPumkinMod.
- * 
- * Have Fun :)
+ * Author: joshi1999
  */
  
+ //todo: add textures
+
  //V.1.0
  
 using System;
