@@ -142,21 +142,27 @@ namespace ManicDigger.Mods
 				{
 					if(m.GetBlock(x, y, z + 1) == MelonSeed4)
 					{
-						if(m.IsValidPos(x + 1, y, z + 1) && m.GetBlock(x + 1, y, z + 1) == 0)
+						if((m.GetBlock(x + 1, y, z + 1) != Melon) &&
+							(m.GetBlock(x + 1, y, z - 1) != Melon) &&
+							(m.GetBlock(x + 1, y + 1, z) != Melon) &&
+							(m.GetBlock(x + 1, y - 1, z) != elon))
 						{
-							m.SetBlock(x + 1, y, z + 1, Melon);
-						}
-						else if(m.IsValidPos(x - 1, y, z + 1) && m.GetBlock(x - 1, y, z + 1) == 0)
-						{
-							m.SetBlock(x - 1, y, z + 1, Melon);
-						}
-						else if(m.IsValidPos(x, y + 1, z + 1) && m.GetBlock(x, y + 1, z + 1) == 0)
-						{
-							m.SetBlock(x, y + 1, z + 1, Melon);
-						}
-						else if(m.IsValidPos(x, y - 1, z + 1) && m.GetBlock(x, y - 1, z + 1) == 0)
-						{
-							m.SetBlock(x, y - 1, z + 1, Melon);
+							if(m.IsValidPos(x + 1, y, z + 1) && m.GetBlock(x + 1, y, z + 1) == 0)
+							{
+								m.SetBlock(x + 1, y, z + 1, Melon);
+							}
+							else if(m.IsValidPos(x - 1, y, z + 1) && m.GetBlock(x - 1, y, z + 1) == 0)
+							{
+								m.SetBlock(x - 1, y, z + 1, Melon);
+							}
+							else if(m.IsValidPos(x, y + 1, z + 1) && m.GetBlock(x, y + 1, z + 1) == 0)
+							{
+								m.SetBlock(x, y + 1, z + 1, Melon);
+							}
+							else if(m.IsValidPos(x, y - 1, z + 1) && m.GetBlock(x, y - 1, z + 1) == 0)
+							{
+								m.SetBlock(x, y - 1, z + 1, Melon);
+							}
 						}
 					}
 				}
@@ -164,21 +170,27 @@ namespace ManicDigger.Mods
 				{
 					if(m.GetBlock(x, y, z + 1) == PumpkinSeed4)
 					{
-						if(m.IsValidPos(x + 1, y, z + 1) && m.GetBlock(x + 1, y, z + 1) == 0)
+						if((m.GetBlock(x + 1, y, z + 1) != Pumpkin) &&
+							(m.GetBlock(x + 1, y, z - 1) != Pumpkin) &&
+							(m.GetBlock(x + 1, y + 1, z) != Pumpkin) &&
+							(m.GetBlock(x + 1, y - 1, z) != Pumpkin))
 						{
-							m.SetBlock(x + 1, y, z + 1, Pumpkin);
-						}
-						else if(m.IsValidPos(x - 1, y, z + 1) && m.GetBlock(x - 1, y, z + 1) == 0)
-						{
-							m.SetBlock(x - 1, y, z + 1, Pumpkin);
-						}
-						else if(m.IsValidPos(x, y + 1, z + 1) && m.GetBlock(x, y + 1, z + 1) == 0)
-						{
-							m.SetBlock(x, y + 1, z + 1, Pumpkin);
-						}
-						else if(m.IsValidPos(x, y - 1, z + 1) && m.GetBlock(x, y - 1, z + 1) == 0)
-						{
-							m.SetBlock(x, y - 1, z + 1, Pumpkin);
+							if(m.IsValidPos(x + 1, y, z + 1) && m.GetBlock(x + 1, y, z + 1) == 0)
+							{
+								m.SetBlock(x + 1, y, z + 1, Pumpkin);
+							}
+							else if(m.IsValidPos(x - 1, y, z + 1) && m.GetBlock(x - 1, y, z + 1) == 0)
+							{
+								m.SetBlock(x - 1, y, z + 1, Pumpkin);
+							}
+							else if(m.IsValidPos(x, y + 1, z + 1) && m.GetBlock(x, y + 1, z + 1) == 0)
+							{
+								m.SetBlock(x, y + 1, z + 1, Pumpkin);
+							}
+							else if(m.IsValidPos(x, y - 1, z + 1) && m.GetBlock(x, y - 1, z + 1) == 0)
+							{
+								m.SetBlock(x, y - 1, z + 1, Pumpkin);
+							}
 						}
 					}
 				}
