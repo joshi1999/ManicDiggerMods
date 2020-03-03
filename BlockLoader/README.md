@@ -4,6 +4,9 @@ The BlockLoader mod is a mod for Manic Digger.
 
 It defines for every compatible Mod an own BlockId which makes it easier to add new mods and handling the BlockIds.
 
+## How to install it for downloaded mods which use BlockLoader:
+Simply put the "BlockLoader.cs" file into your mods folder and start your server. :)
+
 ## How to use it with your own mod (onlinemode):
 
 1. Create your mod like normal, then add the lines like in the Example.cs file
