@@ -1,6 +1,6 @@
 Hello,
 
-1. Type your free Block ID for EnteryourID in the mod.
+1. Install at first BlockLoader (available at this repo too).
 
 2. Put the HoeMod.cs in your Fortress folder.
 
