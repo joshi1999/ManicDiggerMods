@@ -14,10 +14,12 @@ namespace ManicDigger.Mods
     {
         public void PreStart(ModManager m)
         {
+            m.RequireMod("BlockLoader");
         }
         public void Start(ModManager m)
         {
 		    this.m = m;
+            bl = new BlockLoader();
 		    SoundSet sounds = new SoundSet()
             {
                 Walk = new string[] { "walk1", "walk2", "walk3", "walk4" },
@@ -26,7 +28,7 @@ namespace ManicDigger.Mods
                 Clone = new string[] { "clone" },
             };
 
-		    m.SetBlockType(EnteryourID,"Hoe",new BlockType()
+		    m.SetBlockType(bl.getId("Hoe"),"Hoe",new BlockType()
 		    {
 			    TextureIdFront = "Empty",
                 TextureIdLeft = "Empty",
@@ -41,11 +43,11 @@ namespace ManicDigger.Mods
 			    Sounds = sounds,
 		    });
 		    m.RegisterOnBlockUseWithTool(BlockUseWithTool);
-		    m.AddToCreativeInventory("Sense");
-		    m.AddCraftingRecipe2("Sense",1,"IronBlock",2,"TreeTrunk", 1);
+		    m.AddToCreativeInventory("Hoe");
+		    m.AddCraftingRecipe2("Hoe",1,"IronBlock",2,"TreeTrunk", 1);
 		    Crops1 = m.GetBlockId("Crops1");
 		    Crops4 = m.GetBlockId("Crops4");
-		    Sense = m.GetBlockId("Sense");
+		    Hoe = m.GetBlockId("Hoe");
             carrots_0 = m.GetBlockId("carrots_0");
             carrots = m.GetBlockId("carrots");
             potatoes_0 = m.GetBlockId("potatoes_0");
@@ -54,7 +56,8 @@ namespace ManicDigger.Mods
             cotton = m.GetBlockId("cotton");
        	}
 		ModManager m;
-		int Sense;
+        BlockLoader bl;
+		int Hoe;
 		int Crops1;
 		int Crops4;
         int carrots_0;
@@ -67,7 +70,7 @@ namespace ManicDigger.Mods
 
         void BlockUseWithTool (int player, int x, int y, int z, int tool)
 		{
-            if (tool == Sense)
+            if (tool == Hoe)
             {
                 if (m.GetBlock(x, y, z) == Crops4)
                 {
